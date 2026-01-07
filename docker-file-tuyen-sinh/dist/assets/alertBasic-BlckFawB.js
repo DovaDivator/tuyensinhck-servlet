@@ -1,0 +1,1 @@
+import{S as l}from"./index-qv2f6qUe.js";const u=["success","error","warning","info","question"],f="Thông báo",d=({icon:n="error",title:r=f,message:t="",footer:e="",timer:s=0,callback:c=()=>{}})=>{const o=n.toLowerCase(),i=u.includes(o)?o:"error";return l.fire({icon:i,title:r,text:t,footer:e,timer:s,customClass:{confirmButton:"btn-confirm"}}).then(a=>(c(),a))};export{d as a};

@@ -21,7 +21,7 @@ import util.DBConnectionMain;
 /**
  * Servlet implementation class GetUserBasicApi
  */
-@WebServlet("api/get-user-info")
+@WebServlet("/get-user-info")
 public class GetUserBasicApi extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

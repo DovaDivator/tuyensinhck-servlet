@@ -2,7 +2,7 @@ import { Unit } from "../types/FormInterfaces";
 
 export const ChangeUser = async (token: string, dataToSend: Unit): Promise<any> => {
   try {
-    const response = await fetch('http://localhost:8080/api/change-user', {
+    const response = await fetch('/api/change-user', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

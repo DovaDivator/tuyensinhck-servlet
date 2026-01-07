@@ -20,7 +20,7 @@ import util.DBConnectionMain;
 /**
  * Servlet implementation class UsersDropdownList
  */
-@WebServlet("api/users-dropdown")
+@WebServlet("/users-dropdown")
 public class UsersDropdownList extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

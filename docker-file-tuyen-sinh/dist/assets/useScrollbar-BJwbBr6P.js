@@ -1,0 +1,1 @@
+import{r as t}from"./index-qv2f6qUe.js";const a=()=>{const s="has-scrollbar",[c,o]=t.useState(""),r=t.useRef(null),e=()=>{if(r.current){const n=r.current.scrollWidth>r.current.clientWidth;o(n?s:"")}};return t.useEffect(()=>(e(),window.addEventListener("resize",e),()=>window.removeEventListener("resize",e)),[]),[c,r]};export{a as u};

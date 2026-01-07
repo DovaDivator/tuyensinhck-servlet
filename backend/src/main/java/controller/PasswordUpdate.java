@@ -21,7 +21,7 @@ import util.DBConnectionMain;
 /**
  * Servlet implementation class PasswordUpdate
  */
-@WebServlet("/api/change-password")
+@WebServlet("/change-password")
 public class PasswordUpdate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

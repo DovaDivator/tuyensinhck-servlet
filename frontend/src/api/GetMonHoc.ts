@@ -1,6 +1,6 @@
 export const getListMonChoice = async (): Promise<any> => {
     try {
-        const response = await fetch(`http://localhost:8080/api/get-mon?type=dang-ky`, {
+        const response = await fetch(`/api/get-mon?type=dang-ky`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -33,7 +33,7 @@ export const getListMonChoice = async (): Promise<any> => {
 
 export const getListMonGrading = async (token: string): Promise<any> => {
     try {
-        const response = await fetch(`http://localhost:8080/api/get-mon?type=cham-diem`, {
+        const response = await fetch(`/api/get-mon?type=cham-diem`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

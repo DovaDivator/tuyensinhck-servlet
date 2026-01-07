@@ -21,7 +21,7 @@ import util.DBConnectionMain;
 /**
  * Servlet implementation class ChangeUser
  */
-@WebServlet("api/change-user")
+@WebServlet("/change-user")
 public class UserUpdate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

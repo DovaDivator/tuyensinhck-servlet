@@ -1,6 +1,6 @@
 export const fetchKyThi = async (type: string = ""): Promise<any> => {
     try {
-        const response = await fetch(`http://localhost:8080/api/get-ky-thi${type && `?type=${type}`}`, {
+        const response = await fetch(`/api/get-ky-thi${type && `?type=${type}`}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -33,7 +33,7 @@ export const fetchKyThi = async (type: string = ""): Promise<any> => {
 
 export const fetchListKyThi = async (): Promise<any> => {
     try {
-        const response = await fetch(`http://localhost:8080/api/get-ky-thi?type=list`, {
+        const response = await fetch(`/api/get-ky-thi?type=list`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

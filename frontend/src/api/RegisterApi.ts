@@ -11,9 +11,9 @@ export const registerSubmitApi = async (formData: FormDataProps): Promise<any> =
     }
 
     const hashedPassword = await hashPassword(String(password));
-    const dataToSend = { name, email, phone, password: hashedPassword};
+    const dataToSend = { name, email, phone, password: hashedPassword };
 
-    const response = await fetch('http://localhost:8080/api/register', {
+    const response = await fetch('/api/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -39,6 +39,6 @@ export const registerSubmitApi = async (formData: FormDataProps): Promise<any> =
         message: 'Không thể kết nối đến máy chủ.'
       };
     }
-    throw error; 
+    throw error;
   }
 };

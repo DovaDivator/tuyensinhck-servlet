@@ -21,7 +21,7 @@ import util.DBConnectionMain;
 /**
  * Servlet implementation class AdminCCCDManager
  */
-@WebServlet("/api/admin-cccd-mgr")
+@WebServlet("/admin-cccd-mgr")
 public class AdminCCCDManager extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

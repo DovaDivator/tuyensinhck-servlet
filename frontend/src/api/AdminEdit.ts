@@ -4,7 +4,7 @@ interface Unit {
 
 export const setFreeze = async (token: string, dataToSend: Unit): Promise<any> => {
     try {
-        const response = await fetch('http://localhost:8080/api/users-edit?type=freeze', {
+        const response = await fetch('/api/users-edit?type=freeze', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -39,7 +39,7 @@ export const setFreeze = async (token: string, dataToSend: Unit): Promise<any> =
 
 export const deleteCccd = async (token: string, dataToSend: Unit): Promise<any> => {
     try {
-        const response = await fetch('http://localhost:8080/api/users-edit?type=delete-cccd', {
+        const response = await fetch('/api/users-edit?type=delete-cccd', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -74,7 +74,7 @@ export const deleteCccd = async (token: string, dataToSend: Unit): Promise<any> 
 
 export const deleteThiSinh = async (token: string, dataToSend: Unit): Promise<any> => {
     try {
-        const response = await fetch('http://localhost:8080/api/users-edit?type=delete-stu', {
+        const response = await fetch('/api/users-edit?type=delete-stu', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -109,7 +109,7 @@ export const deleteThiSinh = async (token: string, dataToSend: Unit): Promise<an
 
 export const updateGVMon = async (token: string, dataToSend: Unit): Promise<any> => {
     try {
-        const response = await fetch('http://localhost:8080/api/users-edit?type=update-gv-mon', {
+        const response = await fetch('/api/users-edit?type=update-gv-mon', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -144,7 +144,7 @@ export const updateGVMon = async (token: string, dataToSend: Unit): Promise<any>
 
 export const addGVtoDB = async (token: string, dataToSend: Unit): Promise<any> => {
     try {
-        const response = await fetch('http://localhost:8080/api/add?type=teacher', {
+        const response = await fetch('/api/add?type=teacher', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

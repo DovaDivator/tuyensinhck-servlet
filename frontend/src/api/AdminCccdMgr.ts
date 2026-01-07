@@ -4,7 +4,7 @@ interface Unit {
 
 export const UpdateCccd = async (token: string, dataToSend: Unit): Promise<any> => {
     try {
-        const response = await fetch('http://localhost:8080/api/admin-cccd-mgr?action=accept', {
+        const response = await fetch('/api/admin-cccd-mgr?action=accept', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -39,7 +39,7 @@ export const UpdateCccd = async (token: string, dataToSend: Unit): Promise<any> 
 
 export const GetCccd = async (token: string, dataToSend: Unit): Promise<any> => {
     try {
-        const response = await fetch('http://localhost:8080/api/admin-cccd-mgr?action=select', {
+        const response = await fetch('/api/admin-cccd-mgr?action=select', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -74,7 +74,7 @@ export const GetCccd = async (token: string, dataToSend: Unit): Promise<any> => 
 
 export const DeniedCccd = async (token: string, dataToSend: Unit): Promise<any> => {
     try {
-        const response = await fetch('http://localhost:8080/api/admin-cccd-mgr?action=denied', {
+        const response = await fetch('/api/admin-cccd-mgr?action=denied', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -109,7 +109,7 @@ export const DeniedCccd = async (token: string, dataToSend: Unit): Promise<any> 
 
 export const RemoveCccd = async (token: string, dataToSend: Unit): Promise<any> => {
     try {
-        const response = await fetch('http://localhost:8080/api/admin-cccd-mgr?action=delete', {
+        const response = await fetch('/api/admin-cccd-mgr?action=delete', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

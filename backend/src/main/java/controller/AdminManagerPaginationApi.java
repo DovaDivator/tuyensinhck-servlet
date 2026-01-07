@@ -19,7 +19,7 @@ import util.DBConnectionMain;
 /**
  * Servlet implementation class AdminApi
  */
-@WebServlet("api/users-manager-pagination")
+@WebServlet("/users-manager-pagination")
 public class AdminManagerPaginationApi extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

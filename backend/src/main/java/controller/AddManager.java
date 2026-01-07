@@ -21,7 +21,7 @@ import util.DBConnectionMain;
 /**
  * Servlet implementation class AddManager
  */
-@WebServlet("/api/add")
+@WebServlet("/add")
 public class AddManager extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

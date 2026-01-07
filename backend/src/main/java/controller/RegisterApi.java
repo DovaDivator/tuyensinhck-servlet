@@ -19,7 +19,7 @@ import util.DBConnectionMain;
 /**
  * Servlet implementation class RegisterApi
  */
-@WebServlet("api/register")
+@WebServlet("/register")
 public class RegisterApi extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

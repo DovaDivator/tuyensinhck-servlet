@@ -21,7 +21,7 @@ import util.DBConnectionMain;
 /**
  * Servlet implementation class CccdEdit
  */
-@WebServlet("/api/user-cccd")
+@WebServlet("/user-cccd")
 public class CccdUpdateEdit extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

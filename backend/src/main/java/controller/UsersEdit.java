@@ -21,7 +21,7 @@ import util.DBConnectionMain;
 /**
  * Servlet implementation class FreezeUser
  */
-@WebServlet("/api/users-edit")
+@WebServlet("/users-edit")
 public class UsersEdit extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

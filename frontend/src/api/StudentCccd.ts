@@ -4,7 +4,7 @@ interface Unit {
 
 export const UpdateCccd = async (token: string, dataToSend: Unit): Promise<any> => {
     try {
-        const response = await fetch('http://localhost:8080/api/user-cccd?action=update', {
+        const response = await fetch('/api/user-cccd?action=update', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -39,7 +39,7 @@ export const UpdateCccd = async (token: string, dataToSend: Unit): Promise<any> 
 
 export const GetCccd = async (token: string): Promise<any> => {
     try {
-        const response = await fetch('http://localhost:8080/api/user-cccd?action=select', {
+        const response = await fetch('/api/user-cccd?action=select', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -73,7 +73,7 @@ export const GetCccd = async (token: string): Promise<any> => {
 
 export const GetConfirmCccd = async (token: string): Promise<any> => {
     try {
-        const response = await fetch('http://localhost:8080/api/user-cccd?action=confirm', {
+        const response = await fetch('/api/user-cccd?action=confirm', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

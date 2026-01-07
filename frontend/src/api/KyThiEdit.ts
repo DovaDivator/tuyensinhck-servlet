@@ -2,7 +2,7 @@ import { Unit } from "../types/FormInterfaces";
 
 export const UpdateOpenKyThi = async (token: string, dataToSend: Unit): Promise<any> => {
     try {
-        const response = await fetch('http://localhost:8080/api/open-ky-thi', {
+        const response = await fetch('/api/open-ky-thi', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -37,7 +37,7 @@ export const UpdateOpenKyThi = async (token: string, dataToSend: Unit): Promise<
 
 export const UpdateOpenNgayThi = async (token: string, dataToSend: Unit): Promise<any> => {
     try {
-        const response = await fetch('http://localhost:8080/api/open-ngay-thi', {
+        const response = await fetch('/api/open-ngay-thi', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

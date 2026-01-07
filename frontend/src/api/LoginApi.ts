@@ -3,15 +3,15 @@ import { hashPassword } from "../function/convert/hashPassword";
 export const loginSubmitApi = async (userInput: string, password: string): Promise<any> => {
   try {
     const hashedPassword = await hashPassword(String(password));
-    const dataToSend = { username: userInput, password: hashedPassword};
+    const dataToSend = { username: userInput, password: hashedPassword };
 
-    const response = await fetch('http://localhost:8080/api/login', {
+    const response = await fetch('/api/login', {
       method: 'POST',
       credentials: 'include',
       headers: {
         'Content-Type': 'application/json',
       },
-      
+
       body: JSON.stringify(dataToSend),
     });
     const result = await response.json();
@@ -34,6 +34,6 @@ export const loginSubmitApi = async (userInput: string, password: string): Promi
         message: 'Không thể kết nối đến máy chủ.'
       };
     }
-    throw error; 
+    throw error;
   }
 };

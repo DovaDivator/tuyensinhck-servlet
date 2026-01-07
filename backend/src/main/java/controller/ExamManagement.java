@@ -23,7 +23,7 @@ import util.DBConnectionMain;
 /**
  * Servlet implementation class ExamManagement
  */
-@WebServlet("/api/exam")
+@WebServlet("/exam")
 public class ExamManagement extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

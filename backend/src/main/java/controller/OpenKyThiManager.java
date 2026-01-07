@@ -21,7 +21,7 @@ import util.DBConnectionMain;
 /**
  * Servlet implementation class OpenKyThiManager
  */
-@WebServlet("/api/open-ky-thi")
+@WebServlet("/open-ky-thi")
 public class OpenKyThiManager extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

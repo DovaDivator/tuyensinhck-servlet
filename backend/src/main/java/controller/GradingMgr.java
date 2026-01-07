@@ -10,20 +10,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import dao.GradingDAO;
 import exception.UnauthorizedException;
 import model.UserBasic;
 import service.HttpJson;
 import util.DBConnectionMain;
-import dao.GradingDAO;
 
 /**
  * Servlet implementation class Grading
  */
-@WebServlet("/api/grading")
+@WebServlet("/grading")
 public class GradingMgr extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

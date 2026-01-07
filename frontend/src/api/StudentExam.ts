@@ -2,7 +2,7 @@ import { Unit } from "../types/FormInterfaces";
 
 export const GetExamExist = async (token: string): Promise<any> => {
     try {
-        const response = await fetch('http://localhost:8080/api/exam?type=fetch', {
+        const response = await fetch('/api/exam?type=fetch', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -36,7 +36,7 @@ export const GetExamExist = async (token: string): Promise<any> => {
 
 export const insertExam = async (token: string, dataToSend: Unit): Promise<any> => {
     try {
-        const response = await fetch('http://localhost:8080/api/exam?type=insert', {
+        const response = await fetch('/api/exam?type=insert', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -71,7 +71,7 @@ export const insertExam = async (token: string, dataToSend: Unit): Promise<any> 
 
 export const getListExam = async (token: string, dataToSend: Unit): Promise<any> => {
     try {
-        const response = await fetch('http://localhost:8080/api/exam?type=list', {
+        const response = await fetch('/api/exam?type=list', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -106,7 +106,7 @@ export const getListExam = async (token: string, dataToSend: Unit): Promise<any>
 
 export const updateExam = async (token: string, dataToSend: Unit): Promise<any> => {
     try {
-        const response = await fetch('http://localhost:8080/api/exam?type=update', {
+        const response = await fetch('/api/exam?type=update', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -141,7 +141,7 @@ export const updateExam = async (token: string, dataToSend: Unit): Promise<any> 
 
 export const deleteExam = async (token: string, dataToSend: Unit): Promise<any> => {
     try {
-        const response = await fetch('http://localhost:8080/api/exam?type=delete', {
+        const response = await fetch('/api/exam?type=delete', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

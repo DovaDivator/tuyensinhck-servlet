@@ -34,7 +34,7 @@ export const fetchUsers = async ({
     }
 
     try {
-        const res = await fetch(`http://localhost:8080/api/fetch-users?${query.toString()}`, {
+        const res = await fetch(`/api/fetch-users?${query.toString()}`, {
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${token}`,
@@ -101,7 +101,7 @@ export const fetchUsersPagination = async ({
     }
 
     try {
-        const res = await fetch(`http://localhost:8080/api/users-manager-pagination?${query.toString()}`, {
+        const res = await fetch(`/api/users-manager-pagination?${query.toString()}`, {
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${token}`,
@@ -144,7 +144,7 @@ export const fetchUsersDropdownItems = async ({
     query.append("type", type);
 
     try {
-        const res = await fetch(`http://localhost:8080/api/users-dropdown?${query.toString()}`, {
+        const res = await fetch(`/api/users-dropdown?${query.toString()}`, {
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${token}`,

@@ -20,7 +20,7 @@ import util.DBConnectionMain;
 /**
  * Servlet implementation class GetMonHoc
  */
-@WebServlet("/api/get-mon")
+@WebServlet("/get-mon")
 public class GetMonHoc extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

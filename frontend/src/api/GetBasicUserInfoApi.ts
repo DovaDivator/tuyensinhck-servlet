@@ -36,7 +36,7 @@ export const getBasicUserInfo = async (token: string): Promise<BasicUserInfo> =>
 
 const getUserApi = async (token: string, url: string): Promise<any> => {
   try {
-    const response = await fetch('http://localhost:8080/api/' + url, {
+    const response = await fetch('/api/' + url, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

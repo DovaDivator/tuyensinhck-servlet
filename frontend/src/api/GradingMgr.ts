@@ -2,7 +2,7 @@ import { Unit } from "../types/FormInterfaces";
 
 export const GetListTS = async (token: string, dataToSend: Unit): Promise<any> => {
     try {
-        const response = await fetch('http://localhost:8080/api/grading?type=list', {
+        const response = await fetch('/api/grading?type=list', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -38,7 +38,7 @@ export const GetListTS = async (token: string, dataToSend: Unit): Promise<any> =
 export const UpdateTS = async (token: string, dataToSend: Unit): Promise<any> => {
     console.log(dataToSend);
     try {
-        const response = await fetch('http://localhost:8080/api/grading?type=update', {
+        const response = await fetch('/api/grading?type=update', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

@@ -1,0 +1,23 @@
+    <p>Trường Đại học của chúng tôi tự hào cung cấp chương trình đào tạo hệ đại học chất lượng cao, được thiết kế nhằm trang bị cho sinh viên nền tảng kiến thức vững chắc, kỹ năng thực tiễn và tư duy đổi mới sáng tạo.</p>
+    
+    <h4>Sứ mệnh và Mục tiêu</h4>
+    <p>Chúng tôi cam kết đào tạo nguồn nhân lực ưu tú, đáp ứng nhu cầu phát triển của xã hội và hội nhập quốc tế. Mục tiêu của chương trình là phát triển toàn diện năng lực chuyên môn, kỹ năng mềm và phẩm chất đạo đức, giúp sinh viên tự tin khởi nghiệp hoặc đảm nhận các vị trí quan trọng trong các lĩnh vực chuyên môn.</p>
+    
+    <h4>Chương trình Đào tạo</h4>
+    <p>Các chương trình học được xây dựng theo chuẩn quốc tế, kết hợp giữa lý thuyết chuyên sâu và thực hành thực tế. Sinh viên được tiếp cận với các phương pháp giảng dạy hiện đại và cơ hội tham gia nghiên cứu, thực tập tại các doanh nghiệp hàng đầu.</p>
+    <ul>
+        <li>Công nghệ Thông tin: Lập trình, trí tuệ nhân tạo, an ninh mạng</li>
+        <li>Kỹ thuật Cơ khí: Thiết kế, tự động hóa, sản xuất thông minh</li>
+        <li>Quản trị Kinh doanh: Quản lý chiến lược, marketing, tài chính</li>
+        <li>Ngôn ngữ Anh: Biên phiên dịch, giảng dạy, giao tiếp quốc tế</li>
+        <li>Kỹ thuật Xây dựng: Thiết kế kết cấu, quản lý dự án</li>
+    </ul>
+    
+    <h4>Thời gian và Cấu trúc</h4>
+    <p>Thời gian đào tạo kéo dài từ 4 đến 5 năm, tùy thuộc vào ngành học. Chương trình bao gồm các học kỳ lý thuyết, thực hành tại phòng thí nghiệm và thực tập thực tế tại doanh nghiệp, đảm bảo sinh viên sẵn sàng cho thị trường lao động ngay sau khi tốt nghiệp.</p>
+    
+    <h4>Đội ngũ Giảng viên</h4>
+    <p>Chương trình được giảng dạy bởi đội ngũ giáo sư, tiến sĩ và chuyên gia đầu ngành, có nhiều năm kinh nghiệm trong giảng dạy, nghiên cứu và thực tiễn. Chúng tôi tự hào sở hữu đội ngũ tận tâm, luôn đồng hành cùng sinh viên trên hành trình học tập.</p>
+    
+    <h4>Cơ hội Nghề nghiệp</h4>
+    <p>Tốt nghiệp từ chương trình, sinh viên có thể đảm nhận các vị trí chuyên môn tại các tập đoàn đa quốc gia, công ty khởi nghiệp hoặc tiếp tục học lên các bậc cao hơn tại các trường đại học danh tiếng trong và ngoài nước.</p>

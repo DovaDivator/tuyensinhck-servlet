@@ -20,7 +20,7 @@ import util.DBConnectionMain;
 /**
  * Servlet implementation class FetchUsersManager
  */
-@WebServlet("/api/fetch-users")
+@WebServlet("/fetch-users")
 public class FetchUsersManager extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

@@ -17,7 +17,7 @@ import model.UserBasic;
 /**
  * Servlet implementation class GetUserBasicApi
  */
-@WebServlet("api/get-session")
+@WebServlet("/get-session")
 public class GetUserSession extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
