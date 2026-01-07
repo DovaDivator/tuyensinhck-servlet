@@ -1,0 +1,26 @@
+@use "../../style/variables";
+@use "../../style/mixins";
+
+.bg-small{
+    width: 100%;
+    height: 100vh;
+    @include mixins.vertical-display(0);
+    padding: 0;
+    text-align: center;
+
+    .img-small-screen{
+        width: 80%;
+        max-width: 250px;
+        aspect-ratio: 1/1;
+        margin: 0 auto;
+        object-fit: cover;
+        transform: translateY(10%);
+    }
+
+    h6{
+        font-size: 8vw;
+        width: 85%;
+    }
+}
+
+

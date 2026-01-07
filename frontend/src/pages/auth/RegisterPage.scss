@@ -1,0 +1,34 @@
+@use '../../style/variables';
+@use '../../style/mixins';
+@use 'sass:math';
+
+    // Khung chứa login
+    .register-container {
+        @include mixins.flex-center;
+        position: relative;
+        max-width: calc(variables.$bp-md - 100px);
+        width: 90%;
+        padding: 0;
+        gap: 0;
+        @include mixins.animate-effect('fadeInUp');
+
+        // Ảnh bên trái
+        .register-image {
+            width: 100%;
+            height: 15.5rem;
+            margin: 0;
+            flex-shrink: 0;
+            background: url('../../assets/images/SquareSchool.jpg') no-repeat 50% 90%/cover;
+        }
+
+    }
+
+    @media (max-width: variables.$bp-md) {
+        .login-image {
+            display: none;
+        }
+    
+        .login-form-container {
+            width: 100% !important;
+        }
+    }

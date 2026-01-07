@@ -1,0 +1,7 @@
+@use '../../../style/mixins';
+
+.login-form-container {
+    width: 50%;
+    padding: 2.5rem;
+    @include mixins.vertical-display;
+}

@@ -1,0 +1,49 @@
+@use '../../../style/variables' as v;
+@use '../../../style/mixins' as mx;
+@use 'sass:color';
+
+.index-background{
+    background-color: v.$bg-main-white;
+    background-size: cover;
+    @include mx.background;
+
+    .index-background__content {
+        @include mx.vertical-display(0px);
+        justify-content: flex-start;
+        padding: 0;
+        height: 100vh;
+        width: 100%;
+        z-index: 2;
+        box-sizing: border-box;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        .main-wrapper.index {
+            position: relative;
+            flex-grow: 1;
+            justify-content: flex-start;
+        }
+
+        .main-wrapper.index > *{
+            width: 100%;
+            @include mx.vertical-display;
+            padding: 2rem;
+
+            h2{
+                margin: 0;
+            }
+        }
+
+        .main-wrapper.index> *:nth-child(odd){
+            background-color: v.$bg-main-white;
+        }
+
+        .main-wrapper.index> *:nth-child(even){
+            background-color: color.adjust(v.$bg-main-white, $lightness: -5%);
+        }
+
+        .main-wrapper.index > *:last-child {
+            flex-grow: 1;
+        }
+    }
+}

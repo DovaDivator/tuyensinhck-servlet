@@ -1,0 +1,74 @@
+@use "../../../style/variables" as v;
+@use "../../../style/mixins" as mx;
+
+  .student-section {
+    @include mx.vertical-display(1rem);
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+
+    .student-container {
+      align-items: stretch;
+
+        .student-card {
+            width: 300px;
+            text-align: center;
+
+            &.start{
+              @include mx.animate-effect('fadeInRight');
+              z-index: 2;
+            }
+
+            &.end{
+              @include mx.animate-effect('fadeOutRight');
+              z-index: 1;
+            }
+
+            img {
+                width: 150px;
+                height: 150px;
+                border: 1px v.$label-color solid;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-bottom: 15px;
+            }
+
+            p:nth-of-type(1) {
+                font-size: 0.8rem;
+                color: v.$label-color;
+                font-style: italic;
+              }
+            
+              p:nth-of-type(2) {
+                text-indent: 1.5em;
+                text-align: justify;
+            }
+        }
+    }
+  }
+
+
+
+@media (max-width: v.$bp-lg) {
+  .student-container {
+    display: block;
+    width: 300px;
+    height: 450px;
+    position: relative; /* Đảm bảo các div con được chồng lên nhau */
+
+    .student-card {
+      position: absolute; /* Để các div chồng lên nhau */
+      height: 450px;
+      top: 0; 
+      left: 0;
+      z-index: 1; 
+      opacity: 0;
+    }
+  }
+}
+
+  @media (min-width: v.$bp-lg) {
+    .student-container {
+      @include mx.horizontal-display(1.2rem);
+    }
+  }

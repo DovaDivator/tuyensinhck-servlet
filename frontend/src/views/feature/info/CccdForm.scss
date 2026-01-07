@@ -1,0 +1,27 @@
+@use "../../../style/variables" as v;
+@use "../../../style/mixins" as mx;
+@use "sass:color";
+
+.cccd-form {
+    max-width: 750px;
+    @include mx.vertical-display;
+
+    .image-form {
+        &.big{
+            @include mx.horizontal-display;
+        }
+        &.small{
+            @include mx.vertical-display;
+        }
+    }
+
+    .text-form{
+        width: 100%;
+        max-width: 400px;
+        @include mx.vertical-display;
+
+        & > *{
+            width: 100%;
+        }
+    }
+}

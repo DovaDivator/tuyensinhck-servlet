@@ -1,0 +1,77 @@
+// =========================================================================
+// 📌 Chứa các mixins giúp tái sử dụng code, ví dụ như căn giữa
+// =========================================================================
+@use 'variables' as v;
+@use 'animate.css';
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin background{
+    height: auto;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+}
+
+@mixin vertical-display($gap: 1rem) {
+    @include flex-center;
+    flex-direction: column;
+    gap: $gap;
+    box-sizing: border-box;
+}
+
+@mixin horizontal-display($gap: 1rem) {
+    @include flex-center;
+    flex-direction: row;
+    gap: $gap;
+    box-sizing: border-box;
+}
+
+@mixin vertical-grid($gap: 1rem) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: $gap;
+
+    & > * {
+        width: 100%; 
+        box-sizing: border-box;
+    }
+}
+
+@mixin horizontal-grid($gap: 1rem, $min: 100px) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($min, 1fr));
+    gap: $gap;
+    align-items: stretch;
+}
+
+@mixin responsive-grid($column: 2, $gap: 1rem){
+    display: grid;
+    grid-template-columns: repeat($column, 1fr);
+    gap: $gap;
+}
+
+@mixin line-limit($line: 2){
+    display: -webkit-box;
+    -webkit-line-clamp: $line; 
+    line-clamp: $line;        /* Giới hạn 2 dòng */
+    -webkit-box-orient: vertical;  /* Hướng dòng theo chiều dọc */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+//hiệu ứng dùng animate.css
+@mixin animate-effect($effect, $duration: 1s, $delay: 0s) {
+    @extend .animate__animated;
+    @extend .animate__#{$effect};
+    animation-duration: $duration;
+    animation-delay: $delay;
+    animation-fill-mode: both;
+  }

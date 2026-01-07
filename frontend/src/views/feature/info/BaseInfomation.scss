@@ -1,0 +1,81 @@
+@use "../../../style/variables" as v;
+@use "../../../style/mixins" as mx;
+@use "sass:color";
+
+.base-infomation{
+    @include mx.vertical-display;
+
+    &__avatar{
+        width: 10rem;
+        aspect-ratio: 1;
+        border: 5px solid rgb(83, 54, 0);
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0;
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__title{
+        @include mx.vertical-display(0.5rem);
+
+        *{
+            margin: 0;
+        }
+
+        i{
+            font-size: 0.8rem;
+            color: v.$label-color;
+        }
+    }
+
+    &__contact{
+        @include mx.vertical-display();
+        align-items: flex-start;
+        max-width: 600px;
+
+        .line{
+            @include mx.horizontal-display;
+
+            .custom_info{
+                background-color: transparent !important;
+                padding: 0;
+                color: v.$logo-color;
+                transition: all 0.3s ease-in-out !important;
+                &:hover{
+                    color: color.adjust(v.$logo-color, $lightness: -30%);
+                }
+            }
+        }
+    }
+
+    &__cccd-info{
+        @include mx.vertical-display();
+        &__content{
+            @include mx.vertical-display();
+            align-items: flex-start;
+            width: 100%;
+            max-width: 600px;
+        }
+    }
+
+    span {
+        white-space: normal; 
+        word-break: break-word; 
+        flex: 1;
+    }
+
+    & > * > h3{
+        text-align: center;
+    }
+
+    .horizontal-lines{
+        width: 80%;
+        height: 2px;
+        background-color: v.$label-color;
+    }
+}
+

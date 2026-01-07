@@ -1,0 +1,26 @@
+@use '../../../style/mixins' as mx;
+@use '../../../style/variables'as v;
+@use "sass:color";
+
+.countdown-container{
+    @include mx.horizontal-display(1.5rem);
+    text-align: center;
+    background-color: color.adjust(v.$logo-color, $lightness: 30%, $alpha: -0.5);
+    padding: 20px;
+    border-radius:  8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+    .countdown-unit{
+        @include mx.vertical-display(0.25rem);
+
+        &__name{
+            color: #2c2c2c;
+        }
+
+        &__time{
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: 	#B22222;
+        }
+    }
+}

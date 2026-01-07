@@ -1,0 +1,39 @@
+@use '../../../style/variables';
+@use '../../../style/mixins';
+
+.policy-term > :nth-child(1),
+.policy-term > :nth-child(2) {
+  text-align: center;
+}
+
+.policy-term > :nth-child(n+3) {
+  text-align: left;
+}
+
+#last-update{
+    color: variables.$label-color;
+    font-style: italic;
+    font-size: 0.75rem;
+}
+
+.policy-term{
+    padding: 0 1.25rem;
+    margin: 0 auto;
+    max-width: variables.$bp-lg;
+    line-height: 1.5;
+}
+
+.terms-list {
+    counter-reset: term-counter; /* reset counter cho danh sách */
+  }
+  
+  .term h4 {
+    counter-increment: term-counter; /* tăng bộ đếm mỗi lần gặp h3 */
+    position: relative;
+  }
+  
+  .term h4::before {
+    content: counter(term-counter) ". "; /* thêm số trước tiêu đề */
+    font-weight: bold;
+    margin-right: 0.25rem;
+  }

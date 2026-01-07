@@ -1,0 +1,147 @@
+@use '../../../style/variables' as v;
+@use '../../../style/mixins' as mx;
+@use 'sass:color';
+
+.list-table-container{
+  @include mx.horizontal-display(30px);
+  width: 100%;
+  overflow-x: auto;
+}
+
+.list-table {
+    width: auto;
+    height: auto;
+    border-collapse: collapse;
+    box-shadow: v.$box-shadow;
+    border-radius: 8px;
+    // overflow: hidden;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+
+    thead{
+        background: linear-gradient(to right, color.adjust(v.$logo-color, $lightness: 30%), color.adjust(v.$logo-color, $lightness: 10%));
+    }
+
+    th,td{
+      padding: 0.75rem 1rem;
+      text-align: left;
+    }
+
+    th {
+      text-align: left;
+      font-weight: 600;
+      text-transform: uppercase;
+
+      &.th-center, &.th-num{
+        text-align: center;
+      }
+    }
+
+    tbody {
+      tr {
+        border-bottom: 1px solid #edf2f7;
+
+        &:nth-child(odd) {
+          background-color: #FFF8ED;
+        }
+    
+        &:nth-child(even) {
+          background-color: #fff;
+        }
+
+        &:last-child{
+          border-bottom: none;
+        }
+
+        &:hover {
+          filter: brightness(95%);
+          transition: filter 0.3s ease;
+        }
+
+        td[colspan] {
+          text-align: center;
+          padding: 1.5rem;
+          color: v.$label-color;
+          font-style: italic;
+        }
+
+        td{
+          &.th-center{
+            text-align: center;
+            min-width: 1rem;
+            max-width: 1.5rem;
+
+            .dropdown-wrapper{
+              z-index: 100;
+            }
+          }
+
+          &.th-num{
+            text-align: end;
+            min-width: 1rem;
+            max-width: 4rem;
+          }
+
+          &.th-short{
+            min-width: 2.5rem;
+            max-width: 10rem;
+          }
+
+          &.th-text{
+            min-width: 7.5rem;
+            max-width: 15rem;
+          }
+
+          &.th-long{
+            min-width: 15rem;
+            max-width: 22.5rem;
+          }
+
+          .accept{
+            color: green;
+          }
+
+          .denied{
+            color: red;
+          }
+
+          .unknown{
+            color: gray;
+          }
+
+          .warning{
+            color: v.$logo-color;
+          }
+        }
+      }
+    }
+
+  }
+
+  /* Ranking styles for STT column */
+.rank-1 {
+  &::before {
+    content: '🥇'; 
+    font-size: 1.2rem;
+  }
+}
+
+.rank-2 {
+  &::before {
+    content: '🥈'; 
+    font-size: 1.2rem;
+  }
+}
+
+.rank-3 {
+  &::before {
+    content: '🥉'; 
+    font-size: 1.2rem;
+  }
+}
+
+.rank-4, .rank-5{
+  font-weight: bold;
+  color: color.adjust(v.$logo-color, $lightness: -20%);
+}
+

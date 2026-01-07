@@ -1,0 +1,65 @@
+@use "../../style/variables" as v;
+@use "../../style/mixins" as mx; 
+
+.home.introduce-section {
+  padding: 2rem;
+
+  .introduce-section__image{
+    margin: 1rem 0;
+    display: flex;
+    justify-content: flex-end;
+
+    img{
+      width: 80%;
+    }
+
+
+    &.start{
+      @include mx.animate-effect("fadeInLeft", 1.5s);
+      margin: 0;
+    }
+  }
+
+  .introduce-section__limited{
+    width: 80%;
+    aspect-ratio: 20/17;
+
+    &__text{
+      height: calc(100% - 2rem);
+      overflow: hidden;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .introduce-section.home{
+    .introduce-section__control{
+    @include mx.horizontal-grid(3rem);
+    max-height: 400px; 
+    overflow: hidden;
+        .introduce-section__limited{
+        max-height: 390px !important;
+        }
+        img{
+        max-height: 1000px;
+        }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .introduce-section.home{
+    .introduce-section__control{
+        @include mx.vertical-display(1rem);
+
+        >*{
+        justify-content: center !important;
+        }
+
+    }
+
+    .introduce-section__limited{
+        height: 20rem;
+    }
+  }
+}

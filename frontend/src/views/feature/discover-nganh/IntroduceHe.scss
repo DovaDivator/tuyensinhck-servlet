@@ -1,0 +1,41 @@
+@use "../../../style/variables" as v;
+@use "../../../style/mixins" as mx;
+
+.introduce-he-section{
+    padding: 0 0 2rem 0 !important;
+
+    &__header{
+        width: 100%;
+        height: 15rem;
+        position: relative;
+        background-size: cover;
+        background-position: center center;
+        @include mx.flex-center;
+
+        h2{
+            width: 100%;
+            position: absolute;
+            font-size: 2.5rem;
+            color: v.$white;
+            text-align: left;
+            text-transform: uppercase;
+            margin-top: 5rem;
+            z-index: 2;
+            max-width: 900px;
+            padding: 0 2rem;
+            bottom: 5%;
+            text-decoration: underline;
+            text-underline-offset: 0.7rem; 
+            
+            &.start{
+                @include mx.animate-effect("flipInX");
+            }
+        }
+    }
+
+    &__container{
+        max-width: 900px;
+        text-indent: 1rem;
+        padding: 0 2rem;
+    }
+}

@@ -1,0 +1,42 @@
+@use "../../../style/variables" as v;
+@use "../../../style/mixins" as mx;
+
+.tra-cuu-container{
+    @include mx.vertical-display;
+
+    .exam-header{
+        width: 100%;
+        @include mx.horizontal-display;
+        justify-content: start !important;
+
+        .exam-title{
+            flex-grow: 1;
+        }
+
+        .button-group{
+            padding-right: 1rem;
+            @include mx.horizontal-display;
+        }
+    }
+
+    form{
+        @include mx.horizontal-display;
+
+        .dropdown-wrapper{
+            width: 12rem;
+        }
+
+        #khoa{
+            width: 5rem;
+        }
+    }
+
+    .exam-list{
+        @include mx.vertical-display;
+
+        section{
+            @include mx.vertical-display;
+        }
+    }
+}
+

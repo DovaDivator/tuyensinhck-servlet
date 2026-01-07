@@ -1,0 +1,46 @@
+@use '../../../style/variables';
+@use '../../../style/mixins';
+
+.key-information{
+    @include mixins.flex-center;
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    &__list{
+        @include mixins.horizontal-grid;
+        width: 80%;
+        max-width: 1100px;
+
+
+        &__item{
+            gap: 0.75rem;
+            padding: 2rem 1.25rem;
+            flex: 1;
+            justify-content: flex-start;
+            
+
+            &.start{
+                @include mixins.animate-effect("fadeInUp", 0.5s);
+            }
+
+            *{
+                margin: 0;
+            }
+        }
+    }
+}
+
+.key-information__list__item-title{
+    text-align: center;
+}
+
+@media (max-width: variables.$bp-md) {
+    .key-information{
+
+        &__list{
+            @include mixins.vertical-grid(0.75rem);
+        }
+    }
+}

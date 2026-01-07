@@ -1,0 +1,43 @@
+@use "../../../style/variables" as v;
+@use "../../../style/mixins" as mx;
+
+.introduce-image{
+    @include mx.vertical-display;
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+
+    &__item{
+        @include mx.vertical-display;
+
+        img{
+            width: 100px;
+        }
+    }
+
+    &__container {
+        @include mx.responsive-grid(3, 2rem);
+        max-width: 1500px;
+
+        img{
+            width: 100%;
+            aspect-ratio: v.$media_radio;
+            object-fit: cover;
+            object-position: center center;
+        }
+
+        span{
+            font-size: 0.9rem;
+            font-style: italic;
+            color: v.$label-color;
+        }
+
+        @media (max-width: v.$bp-md){
+            @include mx.responsive-grid(2, 2rem);
+        }
+
+        @media (max-width: v.$bp-sm){
+            @include mx.vertical-grid(2rem);
+        }
+    }
+}

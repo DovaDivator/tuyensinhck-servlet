@@ -1,0 +1,19 @@
+@use "../../../style/variables" as v;
+@use "../../../style/mixins" as mx;
+
+.introduce-media{
+    @include mx.vertical-display;
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+
+    &__container {
+        width: 80%;
+        max-width: 600px;
+
+        iframe{
+            width: 100%;
+            aspect-ratio: v.$media_radio;
+        }
+    }
+}

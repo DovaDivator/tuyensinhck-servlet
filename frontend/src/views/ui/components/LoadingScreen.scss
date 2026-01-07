@@ -1,0 +1,23 @@
+@use '../../../style/variables';
+@use '../../../style/mixins';
+
+$z-index: 999;
+
+.loading-screen {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: variables.$background-blur;
+    backdrop-filter: blur(5px);
+    z-index: $z-index;
+    @include mixins.flex-center;
+    @include mixins.animate-effect('fadeIn');
+}      
+
+.loading-spinner{
+    // z-index: $z-index + 1;
+    width: 200px;
+    height: 200px;
+}

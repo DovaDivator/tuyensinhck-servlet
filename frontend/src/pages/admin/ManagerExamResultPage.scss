@@ -1,0 +1,61 @@
+@use "../../style/variables" as v;
+@use "../../style/mixins" as mx;    
+@use "sass:color";
+
+.manager-exam-result-body{
+    justify-content: start !important;
+
+    .manager-exam-result-header{
+        @include mx.vertical-display;
+        width: 100%;
+        
+
+        & > * {
+            margin: 0;
+        }
+
+        .description{
+            font-style: italic;
+            color: v.$label-color;
+        }
+
+        form{
+            width: 100%;
+            max-width: 700px;
+            @include mx.vertical-display;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid v.$label-color;
+
+            & > *:not(:last-child){
+                width: 100%;
+            }
+
+            & > *:last-child{
+                width: 100%;
+                max-width: 225px;
+            }
+
+            .dropdown-grid{
+                @include mx.horizontal-grid();
+            }
+
+        }
+
+        .button-form{
+            @include mx.horizontal-display;
+        }
+    }
+
+    .manager-exam-result-content{
+        @include mx.vertical-display;
+        width: 100%;
+        // overflow-x: auto;
+
+        .list-table {
+            tbody tr td:last-child {
+                width: 100px !important;
+                max-width: none !important;
+            }
+        }
+    }
+}

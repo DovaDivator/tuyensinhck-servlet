@@ -1,0 +1,33 @@
+@use "../../../style/variables" as v;
+@use "../../../style/mixins" as mx;
+
+.uni-level-section{
+    height: 600px;
+
+    &__lv1{
+        width: 100%;
+        height: 100%;
+        max-width: 1000px;
+
+        @media(min-width: v.$bp-md){
+            @include mx.horizontal-grid;
+        }
+
+        @media(max-width: v.$bp-md){
+            @include mx.vertical-grid;
+        }
+
+        & > *.start{
+            @include mx.animate-effect("fadeInLeft");
+        }
+    }
+
+    &__lv2{
+        height: 100%;
+        @include mx.vertical-grid;
+
+        & > *.start{
+            @include mx.animate-effect("fadeInRight");
+        }
+    }
+}

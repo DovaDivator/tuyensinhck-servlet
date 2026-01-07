@@ -1,0 +1,43 @@
+@use "../../../style/variables";
+@use "../../../style/mixins";
+
+.bodemlichthi{
+    @include mixins.flex-center;
+    position: relative;
+    width: 100%;
+    background: url('../../../assets/images/test-background.jpg') no-repeat center 100%/cover;
+
+    .blur{
+        width: 100%;
+        height: 100%;
+        background: variables.$background-blur;
+        backdrop-filter: blur(5px);
+        z-index: 1;
+        position: absolute;
+    }
+
+    & > div{
+        @include mixins.vertical-display(1rem);
+        z-index: 2;
+        color: #FFF3E0;
+
+        > *{
+            text-align: center;
+            margin-top: 0rem;
+            margin-bottom: 0rem;
+        }
+
+        h2{
+            @include mixins.animate-effect("jackInTheBox");
+        }
+
+        button{
+            &.start{
+                @include mixins.animate-effect("bounceIn");
+            }
+            &.loop{
+                @include mixins.animate-effect("bounce", 1.25s);
+             }
+        }
+    }
+}  

@@ -1,0 +1,68 @@
+@use '../../../style/variables' as v;
+
+.input-wrapper {
+    position: relative;
+    background-color: #fff;
+  
+    .input-label {
+      position: absolute;
+      top: 0.75rem;
+      left: 0.75rem;
+      padding: 0 0.25rem;
+      font-size: 0.875rem;
+      color: v.$label-color;
+      background-color: v.$white;
+      transition: all 0.3s ease;
+      pointer-events: none;
+    }
+  
+    &.has-value .input-label,
+    &:focus-within .input-label {
+      top: -0.5rem;
+      left: 0.75rem;
+      font-size: 0.75rem;
+    }
+  }
+
+.input-field-wrapper {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.875rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+    &:focus-within {
+        outline: none;
+        border-color: v.$primary-color;
+        box-shadow: 0 0 5px rgba(v.$primary-color, 0.3);
+    }
+
+    & input {
+        font-family: v.$font-family;
+        padding: 0.75rem;
+        padding-top: 0.625rem;
+        padding-bottom: 0.4375rem !important;
+        font-size: 0.875rem;
+        background: none;
+        border: none;
+        width: 100%; 
+        flex: 1;
+        line-height: 1.5;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    & input::-ms-reveal {
+        display: none;
+    }
+}
+
+form.searching{
+  max-width: 500px;
+}
+

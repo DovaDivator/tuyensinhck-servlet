@@ -1,0 +1,12 @@
+@use "../../style/variables" as v;
+@use "../../style/mixins" as mx;    
+@use "sass:color";
+
+button{
+    &.start{
+        @include mx.animate-effect("bounceIn");
+    }
+    &.loop{
+        @include mx.animate-effect("bounce", 1.25s);
+    }
+}

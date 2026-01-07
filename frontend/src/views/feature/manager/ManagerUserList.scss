@@ -1,0 +1,38 @@
+@use "../../../style/variables" as v;
+@use "../../../style/mixins" as mx;
+
+.manager-user-list{
+    @include mx.vertical-display;
+    justify-content: flex-start !important;
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+    background-color: #dddddd;
+
+    &__filter{
+        width: 100%;
+        max-width: 600px;
+
+        .button-container{
+            @include mx.horizontal-display();
+        }
+
+        .horizontal-field{
+            @include mx.horizontal-grid();
+        }
+    }
+}
+
+.form-container-ky-thi{
+    @include mx.vertical-display;
+    width: 100%;;
+}
+
+    .form-ky-thi{
+        width: 100% !important;
+        max-width: 400px;
+    }
+
+    .button-form{
+            @include mx.horizontal-display();
+        }

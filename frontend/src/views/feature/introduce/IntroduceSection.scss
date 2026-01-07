@@ -1,0 +1,36 @@
+@use "../../../style/variables" as v;
+@use "../../../style/mixins" as mx;
+
+.introduce-section {
+  @include mx.flex-center;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+
+  &__image{
+
+    img{
+      object-fit: contain;
+      width: 100%;
+    }
+  }
+
+  &__limited{
+    @include mx.vertical-display(0px);
+    align-items: flex-start !important;
+
+    &.start{
+      @include mx.animate-effect("fadeInRight", 1.5s);
+    }
+
+    &__text{
+      width: 100%;
+    }
+
+    &__link{
+      color: v.$label-color;
+      font-style: italic;
+      text-decoration: none;
+    }
+  }
+}

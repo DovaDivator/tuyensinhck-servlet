@@ -1,0 +1,30 @@
+@use '../../../style/variables' as v;
+@use '../../../style/mixins' as mx;
+@use 'sass:color';
+
+.info-background{
+    background-color: #dddddd;
+    background-size: cover;
+    @include mx.background;
+    
+    .info-background__content {
+        @include mx.vertical-display(0rem);
+        justify-content: flex-start;
+        padding: 0;
+        height: 100vh;
+        width: 100%;
+        z-index: 2;
+        box-sizing: border-box;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        .main-wrapper.info {
+            @include mx.horizontal-display(1rem);
+            position: relative;
+            flex-grow: 1;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 2rem;            
+        }
+    }
+}

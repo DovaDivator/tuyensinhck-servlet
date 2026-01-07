@@ -1,0 +1,14 @@
+@use "../../../style/variables" as v;
+@use "../../../style/mixins" as mx;
+
+.list-top-section{
+    @include mx.vertical-display;
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+
+    .start{
+        @include mx.animate-effect('fadeInUp', 0.5s)
+    }
+}
+

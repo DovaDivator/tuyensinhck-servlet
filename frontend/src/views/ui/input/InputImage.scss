@@ -1,0 +1,34 @@
+@use "../../../style/variables" as v;
+@use "../../../style/mixins" as mx;
+
+.image-upload-container {
+  @include mx.vertical-display(0.25rem);
+
+  .label{
+    font-style: italic;
+    color: v.$label-color;
+  }
+
+  .image-preview {
+    @include mx.flex-center;
+    width: 18rem;
+    aspect-ratio: 16/9;
+    border: 2px dashed #ccc;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+  }
+}
+
+.image-preview:hover {
+  border-color: #888;
+}
+
+.image-preview span {
+  color: #666;
+  font-size: 16px;
+}
+
+.error-message.not-active{
+  color: white;
+}

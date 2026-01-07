@@ -1,0 +1,9 @@
+{
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features",
+        "editor.formatOnSave": true,
+        "html.format.wrapAttributes": "auto",
+        "html.format.wrapLineLength": 100
+    },
+    "git.ignoreLimitWarning": true
+}

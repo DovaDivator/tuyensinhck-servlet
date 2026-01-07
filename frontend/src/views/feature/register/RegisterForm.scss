@@ -1,0 +1,7 @@
+@use '../../../style/mixins';
+
+.register-form-container {
+    padding: 1.75rem;
+    @include mixins.vertical-display;
+    
+}

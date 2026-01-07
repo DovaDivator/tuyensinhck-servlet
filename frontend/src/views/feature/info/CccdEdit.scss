@@ -1,0 +1,17 @@
+@use "../../../style/variables" as v;
+@use "../../../style/mixins" as mx;
+@use "sass:color";
+
+.cccd-form-container{
+    @include mx.vertical-display;
+
+    .note{
+        margin: 0;
+        color: v.$primary-color;
+        font-style: italic;
+    }
+
+    .button-form{
+        @include mx.horizontal-display;
+    }
+}

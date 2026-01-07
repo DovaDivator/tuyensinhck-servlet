@@ -1,0 +1,22 @@
+@use "../../../style/variables" as v;
+@use "../../../style/mixins" as mx;
+
+.exam-register-container{
+    max-width: 500px;
+    width: 90%;
+    height: 30rem;
+    @include mx.animate-effect('fadeInUp');
+
+    .label-dropdown{
+        @include mx.vertical-display(0.2rem);
+        align-items: start !important;
+
+        & > *{
+            width: 100%;
+        }
+    }
+
+    .button-form{
+        @include mx.horizontal-display(1rem);
+    }
+}
